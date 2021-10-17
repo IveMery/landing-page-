@@ -1,0 +1,32 @@
+%list-style-none {
+    list-style: none;
+}
+%buttons {
+    height: 45px;
+    border-radius: 50px;
+    font-family: "Roboto", sans-serif;
+    width: 130px;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-family: "Overpass";
+    font-weight: 600;
+}
+%hover-button-secondary {
+    background-color: $button-background-hover-secondary;
+    color: $button-color-text-secondary;
+}
+%hover-button-main {
+    background-color: $button-background-hover-main;
+    color: $button-color-text-hover-main;
+}
+%hover-list-items {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+%hover-arrow-icon{
+    transform: rotate(180deg);
+    transition: 0.5s;
+}

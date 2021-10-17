@@ -1,0 +1,28 @@
+.footer-content {
+    background-color: $footer-background-dark;
+    display: flex;
+    justify-content: space-around;
+    color: $color-footer-text;
+    padding: 50px;
+    border-top-right-radius: 80px;
+    font-family: "Overpass";
+}
+.footer-list {
+    list-style: none;
+    &-item {
+        margin-bottom: 10px;
+        &:hover{
+            @extend %hover-list-items;
+        }
+    }
+    &-title {
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+}
+@media (max-width: 650px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}

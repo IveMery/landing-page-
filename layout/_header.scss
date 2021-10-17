@@ -1,0 +1,221 @@
+.header-content {
+    background-color: $color-primary;
+    border-bottom-left-radius: 55px;
+    font-family: "Overpass";
+    background-image: url("../images/bg-pattern-intro.svg");
+    background-repeat: no-repeat;
+    background-position: 25% 57%;
+    background-attachment: fixed;
+    .nav-content {
+        display: flex;
+        justify-content: space-between;
+        color: $color-text-primary;
+        padding: 0 20px 0 20px;
+        .navigation {
+            display: flex;
+        }
+        .logo {
+            font-size: 30px;
+            position: relative;
+            left: 5%;
+            top: 10px;
+        }
+        .nav-list {
+            @extend %list-style-none;
+            display: flex;
+            padding: 10px;
+            &-item {
+                margin-right: 60px;
+                &:hover {
+                    cursor: pointer;
+                    .icon-arrow-dark {
+                        @extend %hover-arrow-icon;
+                    }
+                    .nav-list-subitem {
+                        display: flex;
+                        flex-direction: column;
+                        list-style: none;
+                        background-color: $color-text-primary;
+                        border-radius: 5px;
+                        padding: 15px;
+                        color: $color-text-navlist;
+                    }
+                }
+            }
+        }
+    }
+    .header-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: "Overpass";
+    }
+
+    .button-container {
+        display: flex;
+        margin-bottom: 150px;
+    }
+    .button-container-header {
+        display: flex;
+        margin-bottom: 150px;
+    }
+}
+.button-secondary {
+    @extend %buttons;
+    background-color: hsl(355, 100%, 74%);
+    border: 1px solid $color-text-primary;
+    color: $color-text-primary;
+    &:hover {
+        @extend %hover-button-secondary;
+    }
+}
+.button-secondary-login {
+    @extend %buttons;
+    background-color: hsl(355, 100%, 74%);
+    border: none;
+    color: $color-text-primary;
+    &:hover {
+        @extend %hover-button-secondary;
+    }
+}
+.main-button {
+    @extend %buttons;
+    background-color: $background-color-button;
+    border: transparent;
+    &:hover {
+        @extend %hover-button-main;
+    }
+}
+.title {
+    color: $color-text-primary;
+    margin-bottom: 30px;
+    font-size: 45px;
+}
+.subtitle {
+    color: $color-text-primary;
+    margin-bottom: 35px;
+}
+.menu-hamburger {
+    cursor: pointer;
+    width: 70px;
+    position: relative;
+    left: 85%;
+    top: 70px;
+    visibility: hidden;
+}
+.logo-mobile {
+    display: none;
+}
+.hidden {
+    display: none;
+}
+.icon-arrow-dark {
+    visibility: hidden;
+}
+.icon-arrow-light {
+    visibility: visible;
+    &:hover {
+        @extend %hover-arrow-icon;
+    }
+}
+
+//navlist subitem
+
+.nav-list-subitem {
+    display: none;
+    list-style: none;
+    position: absolute;
+    padding-top: 10px;
+    &-item {
+        padding-bottom: 10px;
+    }
+}
+@media (max-width: 1290px) {
+    .nav-content {
+        flex-direction: column;
+        background-color: white;
+        width: 90%;
+        height: 100vh;
+        z-index: 2;
+        position: fixed;
+        border-radius: 10px;
+        margin-right: -200%;
+        transition: all 0.2s linear;
+    }
+    .show {
+        margin-right: 0;
+    }
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+    }
+    .logo-mobile {
+        font-size: 30px;
+        display: flex;
+        position: absolute;
+        left: 5%;
+        top: 70px;
+    }
+    .nav-list {
+        color: black;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 30px;
+        &-item {
+            width: 100%;
+            margin: 20px;
+        }
+    }
+    .menu-hamburger {
+        visibility: visible;
+    }
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .container-nav {
+        display: flex;
+        justify-content: center;
+        margin-top: 90px;
+    }
+    .logo {
+        display: none;
+    }
+    .line {
+        border: 1px solid rgba(235, 232, 232, 0.905);
+        margin: 30px;
+    }
+    .icon-arrow-dark {
+        visibility: visible;
+    }
+    .icon-arrow-light {
+        visibility: hidden;
+    }
+    .nav-list-subitem {
+        background-color: rgba(228, 224, 224, 0.809) !important;
+        position: relative;
+        left: -9%;
+        padding: 0;
+        font-size: 15px;
+    }
+}
+@media (max-width: 680px) {
+    .menu-hamburger {
+        position: relative;
+        left: 78%;
+    }
+    .title {
+        font-size: 25px;
+    }
+    .nav-content {
+        width: 80%;
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 400px) {
+    .header-content {
+        padding: 10px;
+    }
+}
