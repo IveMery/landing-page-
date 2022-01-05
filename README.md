@@ -1,5 +1,12 @@
-# landing-page-
-landing page challenge frontmentor io
+## Landing-page
 
-[Link de la página](https://landing-page-scss.netlify.app/)
+#Landing page challenge frontmentor io
+-Tecnologias usadas
+- Html
+- Css
+- Sass
+- Responsive Design
+- Javascript
+
+[Ver aqui](https://landing-page-scss.netlify.app/)
 
